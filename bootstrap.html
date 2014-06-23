@@ -10,6 +10,7 @@
     <script src="https://d23cj0cdvyoxg0.cloudfront.net/xivelyjs-1.0.3.min.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
+	<script src="ui-bootstrap-tpls-0.11.0.min.js"></script>
  	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,6 +19,7 @@
     <![endif]-->
 	<style media="screen" type="text/css">
 		body { padding-top: 70px; }
+		.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 	</style>
   </head>
  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -70,6 +72,15 @@
 		  <div class="panel-body">
 			<div class="alert alert-success">RH: {{datastreams.RH3}}</div>
 			<div class="alert alert-success">Temp: {{datastreams.Temp3}}</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Sensor 4</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="alert alert-success">RH: {{datastreams.RH4}}</div>
+			<div class="alert alert-success">Temp: {{datastreams.Temp4}}</div>
 		  </div>
 		</div>
     </div>
