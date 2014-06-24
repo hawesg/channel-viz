@@ -35,54 +35,162 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active"><a href="#">Live</a></li>
+          <li><a href="#about">History</a></li>
+          <li><a href="#contact">Fan Control</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
 
-  <div class="container" ng-controller="MainCtrl">
-
-    <div class="starter-template">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Sensor 1</h3>
-		  </div>
-		  <div class="panel-body">
-			<div class="alert alert-warning">RH: {{datastreams.RH1}}</div>
-			<div class="alert alert-success">Temp: {{datastreams.Temp1}}</div>
+  <div class="container" ng-controller="MainCtrl">		
+	
+	<!--SENSOR 1-->	
+		<div class="panel panel-default"> <!-- 1 -->
+			<div class="pannel-heading"> <!-- 2 -->
+				<h3 class="panel-title"> Sensor 1 </h3>
+			</div> <!-- 2 end -->
+		  <div class="panel-body"> <!-- 3 -->
+			<div class="row"> <!-- 4 -->
+			  <div class="col-md-6"> <!-- 5 -->
+				<div class="alert alert-success text-center"> <!-- 6 -->
+					RH: {{datastreams.RH1}}
+				</div> <!-- 6 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.RH1}}</h5>
+				  </div>
+				  <div class="col-md-6 text-center">
+					<h5>Min: {{min.RH1}}</h5>
+				  </div>
+				</div>	
+			  </div> <!-- 5 end -->
+			  <div class="col-md-6"> <!-- 7 -->
+				<div class="alert alert-success text-center"> <!-- 8 -->
+					Temp: {{datastreams.Temp1}}
+				</div> <!-- 8 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.Temp1}}</h5>
+				  </div>
+				  <div class="col-md-6">
+					<h5>Min: {{min.Temp1}}</h5>
+				  </div>
+				</div>
+			  </div> <!-- 7 end -->
+			</div> <!-- 4 end -->
+		  </div> <!-- 3 end -->
+		</div> <!-- 1 end -->
+	<!--SENSOR 2-->	
+		<div class="panel panel-default"> <!-- 1 -->
+			<div class="pannel-heading"> <!-- 2 -->
+				<h3 class="panel-title"> Sensor 2 </h3>
+			</div> <!-- 2 end -->
+		  <div class="panel-body"> <!-- 3 -->
+			<div class="row"> <!-- 4 -->
+			  <div class="col-md-6"> <!-- 5 -->
+				<div class="alert alert-success text-center"> <!-- 6 -->
+					RH: {{datastreams.RH2}}
+				</div> <!-- 6 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.RH2}}</h5>
+				  </div>
+				  <div class="col-md-6 text-center">
+					<h5>Min: {{min.RH2}}</h5>
+				  </div>
+				</div>	
+			  </div> <!-- 5 end -->
+			  <div class="col-md-6"> <!-- 7 -->
+				<div class="alert alert-success text-center"> <!-- 8 -->
+					Temp: {{datastreams.Temp2}}
+				</div> <!-- 8 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.Temp2}}</h5>
+				  </div>
+				  <div class="col-md-6">
+					<h5>Min: {{min.Temp2}}</h5>
+				  </div>
+				</div>
+			  </div> <!-- 7 end -->
+			</div> <!-- 4 end -->
+		  </div> <!-- 3 end -->
+		</div> <!-- 1 end -->
+	<!--SENSOR 3-->	
+		<div class="panel panel-default"> <!-- 1 -->
+			<div class="pannel-heading"> <!-- 2 -->
+				<h3 class="panel-title"> Sensor 3 </h3>
+			</div> <!-- 2 end -->
+		  <div class="panel-body"> <!-- 3 -->
+			<div class="row"> <!-- 4 -->
+			  <div class="col-md-6"> <!-- 5 -->
+				<div class="alert alert-success text-center"> <!-- 6 -->
+					RH: {{datastreams.RH3}}
+				</div> <!-- 6 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.RH3}}</h5>
+				  </div>
+				  <div class="col-md-6 text-center">
+					<h5>Min: {{min.RH3}}</h5>
+				  </div>
+				</div>	
+			  </div> <!-- 5 end -->
+			  <div class="col-md-6"> <!-- 7 -->
+				<div class="alert alert-success text-center"> <!-- 8 -->
+					Temp: {{datastreams.Temp3}}
+				</div> <!-- 8 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.Temp3}}</h5>
+				  </div>
+				  <div class="col-md-6">
+					<h5>Min: {{min.Temp3}}</h5>
+				  </div>
+				</div>
+			  </div> <!-- 7 end -->
+			</div> <!-- 4 end -->
+		  </div> <!-- 3 end -->
+		</div> <!-- 1 end -->	
+	<!--SENSOR 4-->	
+		<div class="panel panel-default"> <!-- 1 -->
+			<div class="pannel-heading"> <!-- 2 -->
+				<h3 class="panel-title"> Sensor 4 </h3>
+			</div> <!-- 2 end -->
+		  <div class="panel-body"> <!-- 3 -->
+			<div class="row"> <!-- 4 -->
+			  <div class="col-md-6"> <!-- 5 -->
+				<div class="alert alert-success text-center"> <!-- 6 -->
+					RH: {{datastreams.RH4}}
+				</div> <!-- 6 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.RH4}}</h5>
+				  </div>
+				  <div class="col-md-6 text-center">
+					<h5>Min: {{min.RH4}}</h5>
+				  </div>
+				</div>	
+			  </div> <!-- 5 end -->
+			  <div class="col-md-6"> <!-- 7 -->
+				<div class="alert alert-success text-center"> <!-- 8 -->
+					Temp: {{datastreams.Temp4}}
+				</div> <!-- 8 end -->
+				<div class="row">
+				  <div class="col-md-6 text-center">
+					<h5>Max: {{max.Temp4}}</h5>
+				  </div>
+				  <div class="col-md-6">
+					<h5>Min: {{min.Temp4}}</h5>
+				  </div>
+				</div>
+			  </div> <!-- 7 end -->
+			</div> <!-- 4 end -->
+		  </div> <!-- 3 end -->
+		</div> <!-- 1 end -->
 		
-		  </div>
-		</div>
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Sensor 2</h3>
-		  </div>
-		  <div class="panel-body">
-		    <div class="alert alert-danger">RH: {{datastreams.RH2}}</div>
-			<div class="alert alert-success">Temp: {{datastreams.Temp2}}</div>
-		  </div>
-		</div>
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Sensor 3</h3>
-		  </div>
-		  <div class="panel-body">
-			<div class="alert alert-success">RH: {{datastreams.RH3}}</div>
-			<div class="alert alert-success">Temp: {{datastreams.Temp3}}</div>
-		  </div>
-		</div>
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Sensor 4</h3>
-		  </div>
-		  <div class="panel-body">
-			<div class="alert alert-success">RH: {{datastreams.RH4}}</div>
-			<div class="alert alert-success">Temp: {{datastreams.Temp4}}</div>
-		  </div>
-		</div>
+		
     </div>
 
   </div><!-- /.container -->
