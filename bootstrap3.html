@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.6/angular.js"></script>
+    <script src="https://d23cj0cdvyoxg0.cloudfront.net/xivelyjs-1.0.3.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+	<script src="ui-bootstrap-tpls-0.11.0.min.js"></script>
+ 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style media="screen" type="text/css">
+		body { padding-top: 70px; }
+		.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+	</style>
+  </head>
+ 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Live</a></li>
+          <li><a href="#about">History</a></li>
+          <li><a href="#contact">Fan Control</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container" ng-controller="MainCtrl">		
+	
+	<!--SENSOR 1-->	
+		<div class="panel panel-default"> <!-- 1 -->
+		  <div class="panel-body"> <!-- 3 -->
+			<div class="row"> <!-- 4 -->
+			  <div class="col-md-4"> <!-- 5 -->
+				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodRH(datastreams.RH1)]" class="alert alert-success text-center"> <!-- 6 -->
+						<div class="text-right">
+						<small>	{{min.RH1}}%, 
+							{{min.Temp1}}&deg;F </small>
+						</div>
+						<h3>{{datastreams.RH1}}%</br> 
+						{{datastreams.Temp1}}&deg;F </h3>
+						<div class="text-right">
+							<small>{{max.RH1}}%, 
+							{{max.Temp1}}&deg;F</small>
+						</div>
+				</div> <!-- 6 end -->
+			  </div> <!-- 5 end -->
+			  <div class="col-md-4"> <!-- 7 -->
+				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodTemp(datastreams.Temp1)]" class="alert alert-success text-center"> <!-- 8 -->
+					<div class="text-right">
+					<small>	{{min.RH2}}%, 
+						{{min.Temp2}}&deg;F </small>
+					</div>
+					<h3>{{datastreams.RH2}}%</br> 
+					{{datastreams.Temp2}}&deg;F </h3>
+					<div class="text-right">
+						<small>{{max.RH2}}%, 
+						{{max.Temp2}}&deg;F</small>
+					</div>
+				</div> <!-- 8 end -->
+			  </div> <!-- 7 end -->
+			  <div class="col-md-4"> <!-- 7 -->
+				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodTemp(datastreams.Temp1)]" class="alert alert-success text-center"> <!-- 8 -->
+						<div class="text-right">
+						<small>	{{min.RH3}}%, 
+							{{min.Temp3}}&deg;F </small>
+						</div>
+						<h3>{{datastreams.RH3}}%</br> 
+						{{datastreams.Temp3}}&deg;F </h3>
+						<div class="text-right">
+							<small>{{max.RH3}}%, 
+							{{max.Temp3}}&deg;F</small>
+						</div>
+			   </div> <!-- 8 end -->
+			  </div> <!-- 7 end -->
+			</div> <!-- 4 end -->
+		  </div> <!-- 3 end -->
+		</div> <!-- 1 end -->
+	
+		
+		
+    </div>
+
+  </div><!-- /.container -->
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../../dist/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+
+
+
+
