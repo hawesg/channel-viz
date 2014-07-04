@@ -18,3 +18,6 @@ Individual Channels: 61916!random5, 61916!random3600
 
 ## License
 This page is Open Source Software, released under the BSD 3-Clause license. See [LICENSE.md](LICENSE.md) for more info.
+
+
+|| (datastreams.RH1 >= 59 && datastreams.RH1 < 61 || datastreams.RH1 >66 &&  datastreams.RH1 <=69 ) && 'alert-warning'
