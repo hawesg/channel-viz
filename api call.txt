@@ -1,0 +1,2 @@
+https://api.xively.com/v2/feeds/657709964/datastreams/RH1?start=2014-07-07T02:20:49.592098Z&duration=1hour&interval=0
+

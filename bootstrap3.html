@@ -52,42 +52,37 @@
 			  <div class="col-md-4"> <!-- 5 -->
 				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodRH(datastreams.RH1)]" class="alert alert-success text-center"> <!-- 6 -->
 						<div class="text-right">
-						<small>	{{min.RH1}}%, 
-							{{min.Temp1}}&deg;F </small>
+						<small>	Current: {{datastreams.RH1}}% 
+							</small>
 						</div>
-						<h3>{{datastreams.RH1}}%</br> 
-						{{datastreams.Temp1}}&deg;F </h3>
+						<h3>{{average.RH1}}%</br> 
+						{{average.Temp1}}&deg;F </h3>
 						<div class="text-right">
-							<small>{{max.RH1}}%, 
-							{{max.Temp1}}&deg;F</small>
+							<small> Current: {{datastreams.Temp1}}&deg;F</small>
 						</div>
 				</div> <!-- 6 end -->
 			  </div> <!-- 5 end -->
 			  <div class="col-md-4"> <!-- 7 -->
 				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodTemp(datastreams.Temp1)]" class="alert alert-success text-center"> <!-- 8 -->
 					<div class="text-right">
-					<small>	{{min.RH2}}%, 
-						{{min.Temp2}}&deg;F </small>
+					<small> Current: {{datastreams.RH2}}%</small>
 					</div>
-					<h3>{{datastreams.RH2}}%</br> 
-					{{datastreams.Temp2}}&deg;F </h3>
+					<h3>{{average.RH2}}%</br> 
+					{{average.Temp2}}&deg;F </h3>
 					<div class="text-right">
-						<small>{{max.RH2}}%, 
-						{{max.Temp2}}&deg;F</small>
+						<small> Current: {{datastreams.Temp2}}&deg;F</small>
 					</div>
 				</div> <!-- 8 end -->
 			  </div> <!-- 7 end -->
 			  <div class="col-md-4"> <!-- 7 -->
 				<div ng-class="{true:'alert-success', false:'alert-danger'}[isGoodTemp(datastreams.Temp1)]" class="alert alert-success text-center"> <!-- 8 -->
 						<div class="text-right">
-						<small>	{{min.RH3}}%, 
-							{{min.Temp3}}&deg;F </small>
+						<small> Current: {{datastreams.RH3}}%</small>
 						</div>
-						<h3>{{datastreams.RH3}}%</br> 
-						{{datastreams.Temp3}}&deg;F </h3>
+						<h3>{{average.RH3}}%</br> 
+						{{average.Temp3}}&deg;F </h3>
 						<div class="text-right">
-							<small>{{max.RH3}}%, 
-							{{max.Temp3}}&deg;F</small>
+						<small> Current: {{datastreams.Temp3}}&deg;F</small>
 						</div>
 			   </div> <!-- 8 end -->
 			  </div> <!-- 7 end -->
