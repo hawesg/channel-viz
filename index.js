@@ -80,6 +80,7 @@ function MainCtrl($scope) {
 				sum += parseInt($scope.values[i], 10); //don't forget to add the base	
 			   }
 			}
+			console.log(d.toISOString());
 			console.log(ds);
 			console.log($scope.values.length);
 			console.log(sum);
