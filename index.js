@@ -64,7 +64,7 @@ function MainCtrl($scope) {
       });
 //History
 	  var d = new Date( (new Date)*1 - 1000*3600*1 );
-	  xively.datastream.history( $scope.feed_id, ds, {'start': d.toISOString(), 'duration': '1hour', 'interval': 0}, function(data){
+	  xively.datastream.history( $scope.feed_id, ds, {'start': d.toISOString(), 'duration': '1hour', 'interval': 0, limit: 1000}, function(data){
 		 $scope.datapoints = data.datapoints; // response data
 		    $scope.values = [];
 			angular.forEach($scope.datapoints, function(point, index){
