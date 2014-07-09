@@ -80,10 +80,11 @@ function MainCtrl($scope) {
 				sum += parseInt($scope.values[i], 10); //don't forget to add the base	
 			   }
 			}
+			console.log(ds);
 			console.log($scope.values.length);
 			console.log(sum);
-			console.log(avg);
 			var avg = sum/($scope.values.length-invalid);
+			console.log(avg);
 			$scope.average[ds] = avg;
 	  });
       
