@@ -63,24 +63,26 @@ function MainCtrl($scope) {
 		$scope.alertClass = (data.current_value >=60 && data.current_value<=67)?'good':'bad';
       });
 //History
-	  var d = new Date( (new Date)*1 - 1000*3600*1 );
-	  xively.datastream.history( $scope.feed_id, ds, {'start': d.toISOString(), 'duration': '1hour', 'interval': 0}, function(data){
-		 $scope.artists = data.datapoints; // response data
-		    $scope.albums = [];
-			angular.forEach($scope.artists, function(album, index){
-				$scope.albums.push(album.value);
+	  var d = new Date( (new Date)*1 - 1000*3600*4 );
+	  xively.datastream.history( $scope.feed_id, ds, {'start': d.toISOString(), 'duration': '4hours', 'interval': 0}, function(data){
+		 $scope.datapoints = data.datapoints; // response data
+		    $scope.values = [];
+			angular.forEach($scope.datapoints, function(point, index){
+				$scope.values.push(point.value);
 			});
 			var sum = 0;
-			for(var i = 0; i < $scope.albums.length; i++){
-			    sum += parseInt($scope.albums[i], 10); //don't forget to add the base
+			var invalid = 0;
+			for(var i = 0; i < $scope.values.length; i++){
+			   if(isNaN($scope.values[i]) || $scope.values[i]==32){
+				invalid++;
+		  	   }
+			   else{
+				sum += parseInt($scope.values[i], 10); //don't forget to add the base	
+			   }
 			}
 
-			var avg = sum/$scope.albums.length;
+			var avg = sum/($scope.values.length-invalid);
 			$scope.average[ds] = avg;
-		     // angular.forEach(artist.albums, function(album, index){
-		      //  $scope.albums.push(value);
-		      //});
-		//angular.forEach(data.datastreams
 	  });
       
  	  xively.datastream.subscribe( $scope.feed_id, ds, function( event, data ) {
