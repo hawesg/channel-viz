@@ -55,11 +55,8 @@
 						<small>	Current: {{datastreams.RH1}}% 
 							</small>
 						</div>
-						<h3>{{average.RH1}}%</br> 
-						{{average.Temp1}}&deg;F </h3>
-						<div class="text-right">
-							<small> Current: {{datastreams.Temp1}}&deg;F</small>
-						</div>
+						<h3>{{datastreams.RH1_avg | number:2}}%</br> 
+						{{datastreams.Temp1}}&deg;F </h3>
 				</div> <!-- 6 end -->
 			  </div> <!-- 5 end -->
 			  <div class="col-md-4"> <!-- 7 -->
@@ -67,11 +64,8 @@
 					<div class="text-right">
 					<small> Current: {{datastreams.RH2}}%</small>
 					</div>
-					<h3>{{average.RH2}}%</br> 
-					{{average.Temp2}}&deg;F </h3>
-					<div class="text-right">
-						<small> Current: {{datastreams.Temp2}}&deg;F</small>
-					</div>
+					<h3>{{datastreams.RH2_avg | number:2}}%</br> 
+					{{datastreams.Temp2}}&deg;F </h3>
 				</div> <!-- 8 end -->
 			  </div> <!-- 7 end -->
 			  <div class="col-md-4"> <!-- 7 -->
@@ -79,30 +73,12 @@
 						<div class="text-right">
 						<small> Current: {{datastreams.RH3}}%</small>
 						</div>
-						<h3>{{average.RH3}}%</br> 
-						{{average.Temp3}}&deg;F </h3>
-						<div class="text-right">
-						<small> Current: {{datastreams.Temp3}}&deg;F</small>
-						</div>
+						<h3>{{datastreams.RH3_avg | number:2}}% </br>
+						{{datastreams.Temp3}}&deg;F </h3>
 			   </div> <!-- 8 end -->
 			  </div> <!-- 7 end -->
 			</div> <!-- 4 end --> 
-			<div class="row">
-				<div class="col-md-4">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/RH1.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%201%20Humidity&b=true&g=true&scale=auto&timezone=-8">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/Temp1.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%201%20Temperature&b=true&g=true&scale=auto&timezone=-8">	
-				</div>
-				<div class="col-md-4">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/RH2.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%202%20Humidity&b=true&g=true&scale=auto&timezone=-8">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/Temp2.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%202%20Temperature&b=true&g=true&scale=auto&timezone=-8">
-				</div>
-				<div class="col-md-4">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/RH3.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%203%20Humidity&b=true&g=true&scale=auto&timezone=-8">
-					<img src="https://api.xively.com/v2/feeds/657709964/datastreams/Temp3.png?width=300&height=212&c=F53527&duration=1hour&title=Sensor%203%20Temperature&b=true&g=true&scale=auto&timezone=-8">
-					
-				</div>
-			</div>
-			
+						
 		  </div> <!-- 3 end -->
 		</div> <!-- 1 end -->
 	

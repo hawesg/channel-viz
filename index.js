@@ -9,7 +9,6 @@ function MainCtrl($scope) {
 	Temp1: '--',
 	Temp2: '--',
 	Temp3: '--',
-	Temp4: '--',
   };
   $scope.max = {
 	RH1: 65,
@@ -19,7 +18,6 @@ function MainCtrl($scope) {
 	Temp1: 65,
 	Temp2: 65,
 	Temp3: 65,
-	Temp4: 65,
   };
   $scope.min = {
 	RH1: 65,
@@ -29,7 +27,6 @@ function MainCtrl($scope) {
 	Temp1: 65,
 	Temp2: 65,
 	Temp3: 65,
-	Temp4: 65,
   };
   $scope.datastreams = {
     RH1: 65,
@@ -38,6 +35,9 @@ function MainCtrl($scope) {
 	Temp2: 65,
 	RH3: 65,
 	Temp3: 65,
+	RH1_avg: 65,
+	RH2_avg: 65,
+	RH3_avg: 65,
   };
   $scope.alert_class = {
     RH1: 'good',
@@ -63,7 +63,7 @@ function MainCtrl($scope) {
 		$scope.alertClass = (data.current_value >=60 && data.current_value<=67)?'good':'bad';
       });
 //History
-	  var d = new Date( (new Date)*1 - 1000*3600*1 );
+/*	  var d = new Date( (new Date)*1 - 1000*3600*1 );
 	  xively.datastream.history( $scope.feed_id, ds, {'start': d.toISOString(), 'duration': '1hour', 'interval': 0, limit: 1000}, function(data){
 		 $scope.datapoints = data.datapoints; // response data
 		    $scope.values = [];
@@ -88,6 +88,7 @@ function MainCtrl($scope) {
 			console.log(avg);
 			$scope.average[ds] = avg;
 	  });
+	*/
       
  	  xively.datastream.subscribe( $scope.feed_id, ds, function( event, data ) {
         $scope.$apply(function(){
